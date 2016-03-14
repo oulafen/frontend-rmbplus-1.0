@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> <!--优先使用IE最新版和chrome-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"> <!--百度禁止转码-->
+    <meta content="width=1024" name="viewport">  <!--非响应式-->
+    <title>18plus</title>
+    <link rel="icon" href="images/favicon.ico">
+    <!--[if IE]>
+        <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.imgareaselect.pack.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/investor-certification.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"  />
+    <link rel="stylesheet" type="text/css" href="css/imgareaselect-default.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar" role="navigation">
+                <div class="navbar-header">
+                    <a class="logo" href="index.html"><img src="images/logo.png"></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="project-release.html">项目发布</a></li>
+                    <li><a href="q-a.html">新手问答</a></li>
+                </ul>
+                <div class="navbar-right logined J-logined">
+                    <ul class="user-box">
+                        <li class="J-drop-taggle">
+                            <a href="account.html#news" class="news-taggle">
+                                <span>消息</span>
+                                <span class="news-num J-news-num">
+                                    3
+                                </span>
+                            </a>
+                            <div class="drop-menu J-drop-menu">
+                                <!-- if没有未读消息 -->
+                                <p class="no-news-tip J-no-news-tip">暂无新消息</p>
+                                <!-- endif -->
+
+                                <!-- if 有新消息 -->
+                                <div class="J-news-tip-box">
+                                    <a href="account.html#news">
+                                        <p>aaaaaaaaassssssssssssssssssssssssssssssssssssssssssaaaaaa</p>
+                                    </a>
+                                    <a href="account.html#news">
+                                        <p>bbbbbbbbbbbbbbb</p>
+                                    </a>
+                                    <a href="account.html#news">
+                                        <p>ccccccccccccccccccccccc</p>
+                                    </a>
+                                </div>  
+                                <!-- endif -->
+                                <div class="more">
+                                    <a class="C-news-more" href="account.html#news"><span>查看全部</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="J-drop-taggle">
+                            <a href="account.html">
+                                <img class="user-head" src="images/user-head-default.png" >
+                            </a>
+                            <div class="drop-menu account-drop-menu J-drop-menu">
+                                <a href="account.html#basic"><p>个人信息</p></a>
+                                <a href="account.html#investment"><p>投资的项目</p></a>
+                                <a href="account.html#financing"><p>融资的项目</p></a>
+                                <a href="account.html#news"><p>消息通知</p></a>
+                                <a href="account.html#password"><p>修改密码</p></a>
+                                <a href="index.html" class="J-logout"><p>退出</p></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container" >
+        <form id="investorCertification">
+            
+            <h1 class="title">认证投资人申请</h1>    
+            <div class="row">
+                <div class="col-xs-2 lable">真实姓名</div>
+                <div class="col-xs-3">
+                    <input class="form-control J-name" type="text" onchange="judgeOnlyChineseOrEnlish(this)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 lable">头像图片</div>
+                <div class="col-xs-5 investor-img-box">
+                    <img id="investorImg" src="images/pic-default-100.png" alt="">
+                    <p>支持小于2M，格式为jpg、png的图片，推荐尺寸400*400px</p>
+                    <input class="btn" id="investorImgInput" type="button" value="上传">
+                    <input type="file" style="display:none" onchange="cropImg(this)">
+                </div>
+                <div class="modal fade C-J-crop-modal" id="cropInvestorIconModal" data-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="image-box">
+                                    <p><img></p>
+                                </div>
+                                <div class="preview-box">
+                                    <img>
+                                </div>
+                                <canvas width="100" height="100" class="J-canvas" style="overflow:hidden; display:none"></canvas>
+                            </div>
+                            <div class="C-crop-btns">
+                                <a href="javascript:void;"  class="btn C-J-confirm">确定</a>
+                                <a href="javascript:void;" data-dismiss="modal" class="btn C-J-cancel">取消</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">手机号码</div>
+                <div class="col-xs-3">
+                    <input class="form-control J-phone" maxLength="11" onchange="judgePhoneNum(this)" type="text" placeholder="请输入您的手机号码">
+                </div>
+                <div class="col-xs-2 verification-code-lable J-verification-code">验证码</div>
+                <div class="col-xs-2 verification-code-input J-verification-code">
+                    <input class="form-control J-phone-check-code" type="text" placeholder="输入验证码">
+                </div>
+                <div class="col-xs-2 verification-code-box J-verification-code">
+                    <input class="btn verification-code-btn J-phone-check" value="获取验证">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 lable">邮箱地址</div>
+                <div class="col-xs-3">
+                    <input class="form-control J-email" type="text" onchange="judgeEmail(this)" placeholder="请输入您的邮箱">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">所在城市</div>
+                <div class="col-xs-3 city">
+                    <input class="form-control J-at-city" type="text" onchange="judgeOnlyChineseOrEnlish(this)" placeholder="输入城市">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 lable">公司名称</div>
+                <div class="col-xs-5">
+                    <input class="form-control J-company" type="text" maxlength="20" placeholder="请填写您目前所在公司的名称">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 lable">个人职位</div>
+                <div class="col-xs-5">
+                    <input class="form-control J-position" type="text" placeholder="请填写您的职位">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 lable">投资身份</div>
+                <div class="col-xs-5">
+                    <div class="identity-box J-personal-identity">
+                        <a href="javascript:void(0);" class="status-flag select"></a><span>个人</span>
+                    </div>
+                    <div class="identity-box J-organization-identity">
+                        <a href="javascript:void(0);" class="status-flag"></a><span>机构</span>
+                    </div>
+                    <div class="content personal-content">
+                        <p>符合以下条件之一的自然人投资者</p>
+                        <p><a href="javascript:void(0);" class="status-flag select"></a>我的金融资产超过100万元</p>
+                        <p><a href="javascript:void(0);" class="status-flag"></a>我的年收入超过30万元</p>
+                        <p><a href="javascript:void(0);" class="status-flag"></a>我是专业的风险投资人</p>
+                        <p><a href="javascript:void(0);" class="status-flag"></a>我不符合上述任一条件</p>
+                    </div>
+                    <div class="content organization-content" style="display:none">
+                        <input type="text" class="form-control" placeholder="请输入公司名称">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">关注城市</div>
+                <div class="col-xs-8 C-focus-city J-focus-city">
+                    <!--<input class="form-control city-btn" type="button" value="北京">-->
+                    <!--<input class="form-control city-btn" type="button" value="上海">-->
+                    <!--<input class="form-control city-btn" type="button" value="广州">-->
+                    <input class="form-control" type="button" id="city-input" placeholder="选择">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 fields-lable">关注领域</div>
+                <div class="col-xs-8 fields J-focus-fields">
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="电子商务"></a><span>电子商务</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="社交网络"></a><span>社交网络</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="广告营销"></a><span>广告营销</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="智能硬件"></a><span>智能硬件</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="传媒娱乐"></a><span>传媒娱乐</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="工具软件"></a><span>工具软件</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="消费生活"></a><span>消费生活</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="医疗健康"></a><span>医疗健康</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="企业服务"></a><span>企业服务</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="旅游户外"></a><span>旅游户外</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="数据服务"></a><span>数据服务</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="文化艺术"></a><span>文化艺术</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="教育培训"></a><span>教育培训</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="汽车交通"></a><span>汽车交通</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="房产家居"></a><span>房产家居</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="能源环保"></a><span>能源环保</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="体育运动"></a><span>体育运动</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="生物科学"></a><span>生物科学</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="金融"></a><span>金融</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="餐饮"></a><span>餐饮</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="物流"></a><span>物流</span></div>
+                    <div class="field-box"><a href="javascript:void;" class="status-flag" alt="其他"></a><span>其他</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8 agree-list J-agree-list">
+                    <p>
+                        <input type="checkbox">
+                        我已阅读并同意签署
+                        <a href="#">《用户服务协议》</a>
+                        <a href="#">《投资人规则》</a>
+                        <a href="#">《风险提示书》</a>
+                    </p>
+                </div>
+            </div>
+            <div class="error-box"></div>
+            <div class="row">
+                <div class="submit-btn">
+                    <input type="button" class="btn J-submit" value="提交申请">
+                </div>
+            </div>
+        </form>
+        <div class="alert-box J-alert"></div>
+        <div class="modal fade" id="certifySuccessModel" data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body ">
+                        <p>投资人申请提交成功，我们会抓紧对您的申请进行审核，审核通过即可进行投资</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void;"  class="btn C-J-confirm" >确定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="alertImgModel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body ">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="citySelectModal" data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content city-select-modal-content J-select-city-box">
+                    <div class="modal-header">
+                        选择城市（可多选）
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="city J-city">
+                            <input class="select" type="button" value="北京"/>
+                            <input type="button" value="上海"/>
+                            <input type="button" value="广州"/>
+                            <input type="button" value="深圳"/>
+                            <input type="button" value="杭州"/>
+                            <input type="button" value="南京"/>
+                            <input type="button" value="厦门"/>
+                            <input type="button" value="三亚"/>
+                            <input type="button" value="香港"/>
+                            <input type="button" value="苏州"/>
+                            <input type="button" value="武汉"/>
+                            <input type="button" value="西安"/>
+                            <input type="button" value="成都"/>
+                            <input type="button" value="青岛"/>
+                            <input type="button" value="大连"/>
+                            <input type="button" value="重庆"/>
+                            <input type="button" value="哈尔滨"/>
+                            <input type="button" value="沈阳"/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn J-confirm">确定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <div id="back2top">
+            <a href="javascript:void(0);"></a>
+        </div>
+        <div class="footer-links">
+            <p>
+                <a href="" class="link">帮助中心</a>
+                <a href="" class="link">商务合作</a>
+                <a href="" class="link">免责声明</a>
+            </p>
+        </div>
+        <p class="copyright">Copyright©2012-2015北京无花果科技咨询有限公司 版权所有 京ICP备13025672号</p>
+        <p class="copyright">京ICP备12031756号·京公网安备11010802012285号·京网文2012【92850 】</p>
+
+    </footer>
+
+
+</body>

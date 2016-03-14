@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> <!--优先使用IE最新版和chrome-->
+     <meta http-equiv="Cache-Control" content="no-siteapp"> <!--百度禁止转码 -->
+    <meta content="width=1024" name="viewport">  <!--非响应式-->
+    <title>18plus</title>
+    <link rel="icon" href="images/favicon.ico">
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/hc_zoom.js"></script>
+    <script type="text/javascript" charset="utf-8" src="plugin/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="plugin/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/project-detail.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/jquery.bxslider.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <!--[if IE]>
+        <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar" role="navigation">
+                <div class="navbar-header">
+                    <a class="logo" href="index.html"><img src="images/logo.png"></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="project-release.html">项目发布</a></li>
+                    <li><a href="q-a.html">新手问答</a></li>
+                </ul>
+                <div class="navbar-right logined J-logined">
+                    <ul class="user-box">
+                        <li class="J-drop-taggle">
+                            <a href="account.html#news" class="news-taggle">
+                                <span>消息</span>
+                                <span class="news-num J-news-num">
+                                    3
+                                </span>
+                            </a>
+                            <div class="drop-menu J-drop-menu">
+                                <!-- if没有未读消息 -->
+                                <p class="no-news-tip J-no-news-tip">暂无新消息</p>
+                                <!-- endif -->
+
+                                <!-- if 有新消息 -->
+                                <div class="J-news-tip-box">
+                                    <a href="account.html#news">
+                                        <p>aaaaaaaaassssssssssssssssssssssssssssssssssssssssssaaaaaa</p>
+                                    </a>
+                                    <a href="account.html#news">
+                                        <p>bbbbbbbbbbbbbbb</p>
+                                    </a>
+                                    <a href="account.html#news">
+                                        <p>ccccccccccccccccccccccc</p>
+                                    </a>
+                                </div>  
+                                <!-- endif -->
+                                <div class="more">
+                                    <a class="C-news-more" href="account.html#news"><span>查看全部</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="J-drop-taggle">
+                            <a href="account.html">
+                                <img class="user-head" src="images/user-head-default.png" >
+                            </a>
+                            <div class="drop-menu account-drop-menu J-drop-menu">
+                                <a href="account.html#basic"><p>个人信息</p></a>
+                                <a href="account.html#investment"><p>投资的项目</p></a>
+                                <a href="account.html#financing"><p>融资的项目</p></a>
+                                <a href="account.html#news"><p>消息通知</p></a>
+                                <a href="account.html#password"><p>修改密码</p></a>
+                                <a href="index.html" class="J-logout"><p>退出</p></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-right unlogin J-unlogin">
+                    <a href="javascript:void;" class="register J-register">注册</a>
+                    <span>/</span>
+                    <a href="javascript:void;" class="login J-login">登录</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="C-project-detail">
+            <div class="title-box">
+                <h1 class="title">海尔小帅造<span>2014年</span></h1> 
+                <p class="title-desc">让每个人都拥有一台属于自己的放映机，让每个人都拥有一台属于自己的放让每个人都拥有一台属于自己的放。放映机让每个人都拥有一台放映机，让每个人都拥有一台放映机让每个人都拥有一台拥有一台属于自己的放映拥有一台属于自己的放映。</p>
+                <div class="btns">
+                    <a href="javascript:void(0)" class="btn C-J-focus unlike"><div class='img'></div><p class="desc">关注(<span class="J-like-num">43</span>)</p></a>
+                </div>
+                 
+
+            </div>
+            <div class="tab-box J-tab-box">
+                <ul class="nav nav-tabs" id="myDetailTab"> 
+                  <li class="active"><a href="#basisInfo">项目介绍</a></li> 
+                  <li><a href="#dynamicList">项目动态</a></li> 
+                  <li><a href="#discussList">项目问答</a></li> 
+                  <li><a href="#investList">投资列表</a></li> 
+                </ul>
+            </div>
+        </div>
+        <div class="left-box C-project-detail">
+            <div class="tab-content">
+                <div class="tab-pane active" id="basisInfo">
+                    <div class="row partners">
+                        <div class="lable">
+                            <p>创始团队</p>
+                        </div>
+                        <!-- <ul class="J-partner-bxslider no-padding-margin"> -->
+                        <ul class="no-padding-margin">
+                            <li>
+                                <img src="images/partner-icon/1.jpg" alt="">
+                                <h1 class="name">王大锤</h1>
+                                <p class="position">创始人</p>
+                                <p class="desc">
+                                    游久时代  产品总监
+                                    奇虎360  高级产品经理
+                                    优酷视频  项目经理
+                                    毕业于哈尔滨工程大学
+                                    通信工程系
+                                </p>
+                            </li>
+                            <li>
+                                <img src="images/partner-icon/2.jpg" alt="">
+                                <h1 class="name">韩寒</h1>
+                                <p class="position">产品总监</p>
+                                <p class="desc">
+                                    游久时代  产品总监
+                                    奇虎360  高级产品经理
+                                    优酷视频  项目经理
+                                    毕业于哈尔滨工程大学
+                                    通信工程系
+                                </p>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                    <div class="row status-box">
+                        <div class="lable">
+                            <p>项目现状</p>
+                        </div>
+                        <div class="content">
+                            <ul class="no-padding-margin">
+                                <li class="top-oringe">
+                                    <div class="status">
+                                        <p>已上线</p>
+                                        <p class="desc">产品阶段</p>
+                                    </div>
+                                    
+                                </li>
+                                <li class="top-green">
+                                    <div class="status">
+                                        <p>
+                                            暂未盈利
+                                        </p>
+                                        <p class="desc">收入状况</p>
+                                    </div>
+                                </li>
+                                <li class="top-blue">
+                                    <div class="status">
+                                        <p>北京</p>
+                                        <p class="desc">所在城市</p>
+                                    </div>
+                                </li>
+                                <li class="top-oringe">
+                                    <div class="status">
+                                        <p>天使轮</p>
+                                        <p class="desc">融资阶段</p>
+                                    </div>
+                                </li>
+                                <li class="top-green">
+                                    <div class="status status-5">
+                                        <p>
+                                            <span>社交网络</span>
+                                            <span>电子商务</span>
+                                            <span>智能家居</span>
+                                        </p>
+                                        <p class="desc">所属领域</p>
+                                    </div>
+                                </li>
+                                <li class="top-blue">
+                                    <div class="status">
+                                        <p style="text-align: left; padding-left: 16px;">
+                                            <span class="C-link"><a href="#">网站</a></span>
+                                            <span class="C-link"><a href="#">iOS</a></span>
+                                            <span class="C-link"><a href="#">Android</a></span>
+                                        </p>
+                                        <p class="desc">产品展示</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row description">
+                        <div class="lable">
+                            <p>项目介绍</p>
+                        </div>
+                        <div class="content">
+                            <h1 class="title">海尔小帅造：让每个人都拥有一台属于自己的电影放映机</h1>
+                            <img src="images/sample/project-desc-1.jpg" alt="">
+                            <p>       杉度科技是国内少有的一家拥有核心影像解决方案技术的互联网公司，由一支有15年在宝丽来，
+                            佳能影像方案研发经验的团队和有10年互联网营销经验的团队组成，团队成员90%以上来自海外留
+                            学，港籍硕士和BAT成员。两位创始人分别在硬件制造行业和互联网营销上积累了10年以上成功经
+                            验，专业于供应链管理和成本控制，拥有华南最全面最稳定更多供应链资源，深入了解目标用户需
+                            求，极力解决用户痛点。 团队历时8000小时，通过上亿张的人脸测算，产品3次改版打磨和100位
+                            天使用户调研，终于开发出dooraa智能自拍神器，一个人也能拍大片。 
+                                  dooraa将于今年7月正式推出市场。 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="dynamicList">
+                    <div class="C-dynamicList J-dynamicList">
+                        <section id="cd-timeline" class="cd-container">
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img cd-picture"></div>
+                                <div class="cd-timeline-content">
+                                    <div class="title-box">
+                                    <!-- if 用戶是發佈者 -->
+                                        <a href="javascript:void(0)" class="comment-slide J-detail-control" >  </a>
+                                    <!-- endif  -->
+                                        <p class="title J-title">项目立案动工</p>  
+                                    </div>
+                                    <div class="content-box J-content-box" style="display:none;">
+                                        <a href="javascript:void(0)" class="edit-btn J-edit-btn"  ></a>
+                                        <div class="desc J-content">TThe Shui people have many myths and legends that explain their history and influence their daily life. You
+                                        can see these myths in evidence in every tradition they still adhere to, to this day. Every part of the
+                                        culture from their written language, so old it&rsquo;s referred to as a &lsquo;living fossil,&rsquo; to
+                                        their ornate baby carriers- is a testament to how much their heritage means to them. You can find characters
+                                        of their folk lore prominently displayed on all of their art, tethering each new piece of art firmly to the
+                                        histories that shaped them.
+                                        </div>
+                                        <!-- if 用戶是發佈者 -->
+                                        <a href="javascript:void(0)" class="delete J-delete-btn">刪除</a>
+                                        <!-- endif -->
+                                    </div>
+
+                                    <span class="cd-date">2015-01-06</span>
+                                </div>
+                            </div>
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img cd-picture"></div>
+                                <div class="cd-timeline-content">
+                                    <div class="title-box">
+                                        <a href="javascript:void(0);" class="comment-slide J-detail-control" ></a>
+                                        <p class="title J-title">项目立案动工</p>  
+                                    </div>
+                                    <div class="content-box J-content-box"  style="display:none;">
+                                        <a href="javascript:void(0)" class="edit-btn J-edit-btn" ></a>
+                                        <div class="desc J-content">TThe Shui people have many myths and legends that explain their history and influence their daily life. You
+                                        can see these myths in evidence in every tradition they still adhere to, to this day. Every part of the
+                                        culture from their written language, so old it&rsquo;s referred to as a &lsquo;living fossil,&rsquo; to
+                                        their ornate baby carriers- is a testament to how much their heritage means to them. You can find characters
+                                        of their folk lore prominently displayed on all of their art, tethering each new piece of art firmly to the
+                                        histories that shaped them.</div>
+                                        <!-- if 用戶是發佈者 -->
+                                        <a href="javascript:void(0)" class="delete J-delete-btn">刪除</a>
+                                        <!-- endif -->
+                                    </div>
+
+                                    <span class="cd-date">2015-01-08</span>
+                                </div>
+                            </div>
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img cd-picture"></div>
+                                <div class="cd-timeline-content">
+                                   <div class="title-box">
+                                        <!-- if 用戶是發佈者 -->
+                                        <a href="javascript:void(0)" class="comment-slide J-detail-control"></a>
+                                        <!-- endif -->
+                                        <p class="title J-title">项目立案动工</p>  
+                                    </div>
+                                    <div class="content-box J-content-box" style="display:none;">
+                                        <a href="javascript:void(0)" class="edit-btn J-edit-btn" ></a>
+                                        <div class="desc J-content">The Shui people have many myths and legends that explain their history and influence their daily life. You
+                                        can see these myths in evidence in every tradition they still adhere to, to this day. Every part of the
+                                        culture from their written language, so old it&rsquo;s referred to as a &lsquo;living fossil,&rsquo; to
+                                        their ornate baby carriers- is a testament to how much their heritage means to them. You can find characters
+                                        of their folk lore prominently displayed on all of their art, tethering each new piece of art firmly to the
+                                        histories that shaped them.
+                                    </div>
+
+                                    <!-- if 用戶是發佈者 -->
+                                    <a href="javascript:void(0)" class="delete J-delete-btn">刪除</a>
+                                    <!-- endif -->
+                                    </div>
+
+                                    <span class="cd-date">2015-01-11</span>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- if 用戶是發佈者 -->
+                        <div class="btn-box">
+                            <a href="javascript:void(0)" class="btn C-J-new-dynamic">新增动态</a>
+                        </div>
+                        <!-- endif -->
+                    </div>
+                    <div class="C-J-edit-box">
+                        <input type="text" maxlength="15" placeholder="标题（15个字以内）" class="form-control">
+                        <script id="projectDetailEditor" type="text/plain" style="width:100%; height:300px"></script>
+                        <div class="C-J-edit-box-btn">
+                            <a href="javascript:void(0);" class="btn save J-save-new-dynamic-btn">保存</a>
+                            <a href="javascript:void(0);" class="btn cancel J-cancel-new-dynamic-btn">取消</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="tab-pane" id="discussList">
+                    <ul class="no-padding-margin C-qa-list J-qa-list">
+                        <li>
+                            <div class="row q">
+                                <div class="q-label">问</div>
+                                <div class="q-content">
+                                    现在所在的茶会所盈利能力相对来说还普遍较低，你们通过什么方式来扭转这种局面？
+                                </div>
+                            </div>
+                            <div class="row a">
+                                <div class="a-person-box">
+                                    <img src="images/partner-icon/1.jpg" alt="">
+                                    <p>王大发</p>
+                                    <p class="position">CEO</p>
+                                </div>
+                                <div class="a-content-box">
+                                    <div class="content">
+                                        我们的项目发起人之一，有过多年的传媒业工作经验和资源，免费成为一些差额专业栏目的才放几滴，我们会欧诺个过跟当地地那是太、王珞丹鞥紫云啊媒体的茶叶专业栏目合作的方式，扩大宣传面、提高知名度、老吸引小给这。
+                                    </div>
+                                    <div class="time">
+                                        2015年7月5日
+                                    </div>
+                                </div> 
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row q">
+                                <div class="q-label">问</div>
+                                <div class="q-content">
+                                    现在所在的茶会所盈利能力相对来说还普遍较低，你们通过什么方式来扭转这种局面？
+                                </div>
+                            </div>
+                            <div class="row a">
+                                <div class="a-person-box">
+                                    <img src="images/partner-icon/1.jpg" alt="">
+                                    <p>王大发</p>
+                                    <p class="position">CEO</p>
+                                </div>
+                                <div class="a-content-box">
+                                    <div class="content">
+                                        我们的项目发起人之一，有和资源，免费成为一些差额专业栏云啊媒体的茶叶专业栏目合作的方式，扩大宣传面、提高知名度、老吸引小给这。
+                                    </div>
+                                    <div class="time">
+                                        2015年7月5日
+                                    </div>
+                                </div> 
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row q">
+                                <div class="q-label">问</div>
+                                <div class="q-content">
+                                    现在所在的茶会所盈利在所在的茶会所在所在的茶会所盈利盈利在所在的茶会所盈利能力相对来说还普遍较低，你们通过什么方式来扭转这种局面？
+                                </div>
+                            </div>
+                            <div class="row a">
+                                <div class="a-person-box">
+                                    <img src="images/partner-icon/1.jpg" alt="">
+                                    <p>王大发</p>
+                                    <p class="position">CEO</p>
+                                </div>
+                                <div class="a-content-box">
+                                    <div class="content">
+                                        我们的项在所在的茶会所盈利在所在的茶会所盈利在所在的茶会所盈利目发起人之一，有过多年的传媒业工作经验和资源，免费成为一些差额专业栏目的才放几滴，我们会欧诺个过跟当地地那是太、王珞丹鞥紫云啊媒体的茶叶专业栏目合作的方式，扩大宣传面、提高知名度、老吸引小给这。
+                                    </div>
+                                    <div class="time">
+                                        2015年7月5日
+                                    </div>
+                                </div> 
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="row q-btn-box J-q-btn-box">
+                        <a href="javascript:void;" class="btn q-btn">我要提问</a>
+                    </div>
+                </div>
+                <div class="tab-pane" id="investList">
+                    <ul class="no-padding-margin">
+                         <li>
+                             <img src="images/partner-icon/1.jpg" alt="" class="head-icon">
+                             <div class="desc-box">
+                                 <p class="head">
+                                     <span class="name">胡一刀</span>
+                                     <span class="time">2015/06/01 17:21</span>
+                                 </p>
+                                 <p class="desc">
+                                     <span class="lable">投资金额：</span>
+                                     <span class="money">
+                                         ￥
+                                         <span class="num">
+                                             25万
+                                         </span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </li>
+                         <li>
+                             <img src="images/partner-icon/1.jpg" alt="" class="head-icon">
+                             <div class="desc-box">
+                                 <p class="head">
+                                     <span class="name">胡一刀</span>
+                                     <span class="time">2015/06/01 17:21</span>
+                                 </p>
+                                 <p class="desc">
+                                     <span class="lable">投资金额：</span>
+                                     <span class="money">
+                                         ￥
+                                         <span class="num">
+                                             250万
+                                         </span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </li>
+                         <li>
+                             <img src="images/partner-icon/1.jpg" alt="" class="head-icon">
+                             <div class="desc-box">
+                                 <p class="head">
+                                     <span class="name">胡一刀</span>
+                                     <span class="time">2015/06/01 17:21</span>
+                                 </p>
+                                 <p class="desc">
+                                     <span class="lable">投资金额：</span>
+                                     <span class="money">
+                                         ￥
+                                         <span class="num">
+                                             1000万
+                                         </span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </li>
+                         <li>
+                             <img src="images/partner-icon/1.jpg" alt="" class="head-icon">
+                             <div class="desc-box">
+                                 <p class="head">
+                                     <span class="name">胡一刀</span>
+                                     <span class="time">2015/06/01 17:21</span>
+                                 </p>
+                                 <p class="desc">
+                                     <span class="lable">投资金额：</span>
+                                     <span class="money">
+                                         ￥
+                                         <span class="num">
+                                             250万
+                                         </span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </li>
+                         <li>
+                             <img src="images/partner-icon/1.jpg" alt="" class="head-icon">
+                             <div class="desc-box">
+                                 <p class="head">
+                                     <span class="name">胡一刀</span>
+                                     <span class="time">2015/06/01 17:21</span>
+                                 </p>
+                                 <p class="desc">
+                                     <span class="lable">投资金额：</span>
+                                     <span class="money">
+                                         ￥
+                                         <span class="num">
+                                             250万
+                                         </span>
+                                     </span>
+                                 </p>
+                             </div>
+                         </li>
+                         
+                     </ul> 
+                </div>
+
+            </div>
+        </div>
+        <div class="right-box C-project-detail">
+            <div class="row invest-progress">
+                <div class="lable">
+                    <p>融资进度</p>
+                </div>
+                <div class="row top-line">
+                    <div class="title">已筹集：<span class="blue"> ￥270万</span></div>
+                    <div class="state-line-box">
+                        <div class="state-line" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="status-metas">
+                    <div class="row">
+                        <div class="col-xs-6 label">完成度</div>
+                        <div class="col-xs-6 desc">75%</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 label">融资目标</div>
+                        <div class="col-xs-6 desc"><span class="blue ">360万</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 label">出让股份</div>
+                        <div class="col-xs-6 desc">3%</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 label">剩余时间</div>
+                        <div class="col-xs-6 desc">10天</div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="javascript:void(0);" class="btn C-J-dialog"><span class="desc">约约约</span></a>
+                </div>
+                
+            </div>
+            <div class="row leader">
+                <div class="lable">
+                    <p>项目领投人</p>
+                </div>
+                <div class="intro">
+                    <img src="images/partner-icon/lead-icon.png" alt="">
+                    <div class="desc">
+                        <div class="title">顺为资本</div>
+                        <p>
+                            创势资本是由国内资深的天使投资人联合发起设立专注于移动互联网
+                        </p>
+                    </div>
+                </div>
+                <div class="intro">
+                    <img src="images/partner-icon/lead-icon.png" alt="">
+                    <div class="desc">
+                        <div class="title">顺为资本</div>
+                        <p>
+                            创势资本是由国内资深的天使投资人联合发起设立专注于移动互联网
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row gift-show">
+                <div class="lable">
+                    <p>投资档位</p>
+                </div>
+                <div class="show-box">
+                    <div class="intro">
+                        <div class="short-desc">
+                            <div class="money">￥1000.00</div>
+                            <p>100人已支持，仅剩20个名额</p>
+                        </div>
+                        <div class="btn-box">
+                            <a href="return-confirm.html" class="btn">我要支持</a>
+                        </div>
+                    </div>
+                    <div class="display">
+                        <div class="desc">
+                            阿狸小号玩偶，您将以史无前例的价格获得
+                            HiSmart智能背包一个，市场价格1499元！
+                            抢到就是赚到@请您备注好颜色，否则可能
+                            会造成延期发货。免费运送到全国各个角落
+                        </div>
+                        <ul class="display-imgs">
+                            <li>
+                                <div class="zoom_img_box J_zoom_img_box" style="width:135px; height:135px;">
+                                    <img class="show-img" src="images/gift/1.jpg" />
+                                    <img src="images/gift/1.jpg" style="display:none;" hc_zoom="position:'left',large_border:'2px solid #ddd',border:'none',bg_color:'#fff', auto_change:'true'" />
+                                </div>
+                            </li>
+                            <li>
+                                <div class="zoom_img_box J_zoom_img_box" style="width:135px; height:135px;">
+                                    <img class="show-img" src="images/gift/2.jpg" />
+                                    <img src="images/gift/2.jpg" style="display:none;" hc_zoom="position:'left',large_border:'2px solid #ddd',border:'none',bg_color:'#fff', auto_change:'true'" />
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="show-box">
+                    <div class="intro">
+                        <div class="short-desc">
+                            <div class="money">￥1000.00</div>
+                            <p>100人已支持，仅剩20个名额</p>
+                        </div>
+                        <div class="btn-box">
+                            <a href="return-confirm.html" class="btn">我要支持</a>
+                        </div>
+                    </div>
+                    <div class="display">
+                        <div class="desc">
+                            阿狸小号玩偶，您将以史无前例的价格获得
+                            HiSmart智能背包一个，市场价格1499元！
+                            抢到就是赚到@请您备注好颜色，否则可能
+                            会造成延期发货。免费运送到全国各个角落
+                        </div>
+                        <ul class="display-imgs">
+                            <li>
+                                <div class="zoom_img_box J_zoom_img_box" style="width:135px; height:135px;">
+                                    <img class="show-img" src="images/gift/1.jpg" />
+                                    <img src="images/gift/1.jpg" style="display:none;" hc_zoom="position:'left',large_border:'2px solid #ddd',border:'none',bg_color:'#fff', auto_change:'true'" />
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row quick-QA">
+                <div class="lable">
+                    <p>快速问答</p>
+                </div>
+                <div class="q-a-box">
+                    <div class="q">问题: 股权众筹是否可以超募？</div>
+                    <div class="a">
+                    回复: 与产品众筹不同,股权众筹有几个特
+                    点:(1)根据法律规定,投资人在发送投资意
+                    向后,享有10天冷静期,期间可以无条件撤
+                    销意向。 （2）信用认募，线上缴纳保
+                    </div>
+                </div>    
+                <div class="q-a-box">
+                    <div class="q">问题: 股权众筹是否可以超募？</div>
+                    <div class="a">
+                    回复: 与产品众筹不同,股权众筹有几个特
+                    点:(1)根据法律规定,投资人在发送投资意
+                    向后,享有10天冷静期,期间可以无条件撤
+                    销意向。 （2）信用认募，线上缴纳保
+                    </div>
+                </div>    
+                <div class="q-a-box">
+                    <div class="q">问题: 股权众筹是否可以超募？</div>
+                    <div class="a">
+                    回复: 与产品众筹不同,股权众筹有几个特
+                    点:(1)根据法律规定,投资人在发送投资意
+                    向后,享有10天冷静期,期间可以无条件撤
+                    销意向。 （2）信用认募，线上缴纳保
+                    </div>
+                </div>    
+                    
+            </div>
+            
+        </div>
+    </div>
+    <div class="modal fade" id="myDialogModel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body ">
+                    <textarea name="dialog-editor" placeholder="请您简短写一下需要约谈的内容" maxlength="200"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void;"  class="btn C-J-confirm">确定</a>
+                    <a href="javascript:void;"  class="btn C-J-cancel" data-dismiss="modal">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myQuestionModel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body ">
+                    <textarea name="dialog-editor" placeholder="请简短写一下您要提问的问题吧" maxlength="100"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void;"  class="btn C-J-confirm">确定</a>
+                    <a href="javascript:void;"  class="btn C-J-cancel" data-dismiss="modal">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="alertImgModel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body ">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirmModel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body ">
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void;"  class="btn C-J-confirm">确定</a>
+                    <a href="javascript:void;"  class="btn C-J-cancel" data-dismiss="modal">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade C-register-login-modal" id="registerModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body ">
+                    <div class="register-login-box">
+                        <ul class="nav nav-tabs" id="myRegisterTab"> 
+                          <li class="active"><a href="#phone">手机注册</a></li> 
+                          <li><a href="#email">邮箱注册</a></li> 
+                        </ul> 
+                        <div class="tab-content"> 
+                          <div class="tab-pane active" id="phone">
+                              <div class="row">
+                                  <input class="form-control J-name" type="text" maxlength="16" placeholder="用户名" onchange="judgeName(this)">
+                              </div>
+                              <div class="row">
+                                  <input class="form-control J-pwd" maxlength="16" type="password" placeholder="请输入至少6位密码" onchange="judgePassword(this)">
+                              </div>
+                              <div class="row">
+                                  <input class="form-control J-pwd-confir" maxlength="16" type="password" placeholder="请确认密码" onchange="judgePasswordConfirm(this)">
+                              </div>
+                              <div class="row">
+                                  <input class="form-control J-phone" type="num" maxlength="11" placeholder="请输入手机号" onchange="judgePhoneNum(this)">
+                              </div>
+                              <div class="row">
+                                  <div class="col-xs-8 check-input">
+                                      <input class="form-control J-check-code" type="text" placeholder="输入验证码">
+                                  </div>
+                                  <div class="col-xs-4 check-btn">
+                                      <input class="btn J-phone-check" value="获取验证">
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <input type="checkbox" class="checkbox">
+                                  我已阅读并同意
+                                  <a href="services-terms.html">《服务条款》</a>
+                              </div>
+                              <div class="error-box">
+                                  请将信息填写完整
+                              </div>
+                              <div class="row">
+                                  <button onclick="post_data(this)" class="btn ">注册</button>
+                              </div>
+                              <div class="row bottom">
+                                  <p>已有账号？<a href="javascript:void;" class="J-change-to-login">直接登录</a></p>
+                              </div>
+                          </div> 
+                          <div class="tab-pane" id="email">
+                              <div class="row">
+                                  <input class="form-control J-name" type="text" maxlength="16" placeholder="用户名" onchange="judgeName(this)">
+                              </div>
+                              <div class="row">
+                                  <input class="form-control J-email" type="email" onchange="judgeEmail(this)" placeholder="邮箱地址">
+                              </div> 
+                              <div class="row">
+                                  <input class="form-control J-pwd" type="password" maxlength="16" onchange="judgePassword(this)" placeholder="请输入至少6位密码">
+                              </div>
+                              <div class="row">
+                                  <input class="form-control J-pwd-confir" type="password" maxlength="16" onchange="judgePasswordConfirm(this)"  placeholder="请确认密码">
+                              </div>
+                              <div class="row">
+                                  <div class="col-xs-8 check-input">
+                                      <input class="form-control J-check-code" type="text" placeholder="输入验证码">
+                                  </div>
+                                  <div class="col-xs-4 check-btn">
+                                      <a href="javascript:void(0)" class="btn">验证码</a>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <input type="checkbox" class="checkbox">
+                                  我已阅读并同意
+                                  <a href="services-terms.html">《服务条款》</a>
+                              </div>
+                              <div class="error-box"></div>
+                              <div class="row">
+                                  <button onclick="post_data(this)" class="btn ">注册</button>
+                              </div>
+                              <div class="row bottom">
+                                  <p>已有账号？<a href="javascript:void;" class="J-change-to-login">直接登录</a></p>
+                              </div>
+                          </div> 
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade C-register-login-modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Welcome</p>
+                </div>
+                <div class="modal-body ">
+                    <div class="register-login-box login" id="login">
+                        <div class="row">
+                            <input type="text" class="form-control J-account" onchange="judgeLoginName(this)" placeholder="手机号或者邮箱"> 
+                        </div>
+                        <div class="row">
+                            <input type="password" class="form-control J-pwd" onchange="judgeLoginPassword(this)" maxlength="16" placeholder="输入密码"> 
+                        </div>
+                        <div class="row">
+                            <input type="checkbox" class="checkbox">
+                              一周内自动登录
+                              <a class="f-r J-forgot-password" href="javascript:void;">忘记密码？</a>
+                        </div>
+                        <div class="error-box">
+                          </div>    
+                        <div class="row">
+                              <button onclick="post_data(this)" class="btn">登录</button>
+                          </div>
+                          <div class="row bottom">
+                              <p>没有账号？<a href="javascript:void;" class="J-change-to-register">立即注册</a></p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade C-register-login-modal" id="forgotPasswordModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body ">
+                    <div class="forgot-password-box">
+                        <ul class="nav nav-tabs" id="myForgotPwdTab"> 
+                            <li class="active"><a href="#phoneBack">通过手机号找回</a></li> 
+                            <li><a href="#emailBack">通过邮箱找回</a></li> 
+                        </ul> 
+                   
+                        <div class="tab-content"> 
+                            <div class="tab-pane active" id="phoneBack">
+                                <div class="row">
+                                    <input type="text" class="form-control J-phone-input" maxlength="11" placeholder="手机号" onchange="judgePhoneNum(this)">
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7 check-box">
+                                        <input type="text" class="form-control" placeholder="输入验证码">
+                                    </div>
+                                    <div class="col-xs-3 check-box-btn">
+                                        <input type="button" class="btn C-J-fetch-check-btn J-fetch-phone-check" value="获取验证">
+                                    </div>
+                                </div>
+                                <div class="error-box"></div>
+                                <input type="button" class="btn J-phone-reset-pwd" value="重置密码">
+                            </div>
+                            <div class="tab-pane" id="emailBack">
+                                <div class="row">
+                                    <input type="text" class="form-control J-email-input" maxlength="11" placeholder="注册邮箱" onchange="judgeEmail(this)">
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7 check-box">
+                                        <input type="text" class="form-control" placeholder="输入验证码">
+                                    </div>
+                                    <div class="col-xs-3 check-box-btn">
+                                        <input type="button" class="btn C-J-fetch-check-btn J-fetch-email-check" value="获取验证">
+                                    </div>
+                                </div>
+                                <div class="error-box"></div>
+                                <input type="button" class="btn J-email-reset-pwd" value="重置密码">
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="back2top">
+            <a href="javascript:void(0);"></a>
+        </div>
+        <div class="footer-links">
+            <p>
+                <a href="" class="link">帮助中心</a>
+                <a href="" class="link">商务合作</a>
+                <a href="" class="link">免责声明</a>
+            </p>
+        </div>
+        <p class="copyright">Copyright©2012-2015北京无花果科技咨询有限公司 版权所有 京ICP备13025672号</p>
+        <p class="copyright">京ICP备12031756号·京公网安备11010802012285号·京网文2012【92850 】</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> <!--优先使用IE最新版和chrome-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"> <!--百度禁止转码-->
+    <meta content="width=1024" name="viewport">  <!--非响应式-->
+    <title>18plus</title>
+    <link rel="icon" href="images/favicon.ico">
+    <!--[if IE]>
+        <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar" role="navigation">
+                <div class="navbar-header">
+                    <a class="logo" href="index.html"><img src="images/logo.png"></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="javascript:void;" class="J-project-release-link">项目发布</a></li>
+                    <li class="active"><a href="q-a.html">新手问答</a></li>
+                </ul>
+                <div class="navbar-right logined J-logined">
+                    <ul class="user-box">
+                        <li class="J-drop-taggle">
+                            <a href="account.html#news" class="news-taggle">
+                                <span>消息</span>
+                                <span class="news-num J-news-num">
+                                    3
+                                </span>
+                            </a>
+                            <div class="drop-menu J-drop-menu">
+                                <!-- if没有未读消息 -->
+                                <p class="no-news-tip J-no-news-tip">暂无新消息</p>
+                                <!-- endif -->
+
+                                <!-- if 有新消息 -->
+                                <div class="J-news-tip-box">
+                                    <a href="account.html#news">
+                                        <p>aaaaaaaaassssssssssssssssssssssssssssssssssssssssssaaaaaa</p>
+                                    </a>
+                                    <a href="account.html#news">
+                                        <p>bbbbbbbbbbbbbbb</p>
+                                    </a>
+                                    <a href="account.html#news">
+                                        <p>ccccccccccccccccccccccc</p>
+                                    </a>
+                                </div>  
+                                <!-- endif -->
+                                <div class="more">
+                                    <a class="C-news-more" href="account.html#news"><span>查看全部</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="J-drop-taggle">
+                            <a href="account.html">
+                                <img class="user-head" src="images/user-head-default.png" >
+                            </a>
+                            <div class="drop-menu account-drop-menu J-drop-menu">
+                                <a href="account.html#basic"><p>个人信息</p></a>
+                                <a href="account.html#investment"><p>投资的项目</p></a>
+                                <a href="account.html#financing"><p>融资的项目</p></a>
+                                <a href="account.html#news"><p>消息通知</p></a>
+                                <a href="account.html#password"><p>修改密码</p></a>
+                                <a href="index.html" class="J-logout"><p>退出</p></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="navbar-right unlogin J-unlogin">
+                    <a href="javascript:void;" class="register J-register">注册</a>
+                    <span>/</span>
+                    <a href="javascript:void;" class="login J-login">登录</a>
+                </div>
+                
+            </nav>
+        </div>
+    </div>
+    <div class="container C-QA">
+        <div class="nav-box">
+            <ul class="nav nav-tabs" id="QATab"> 
+              <li class="active"><a href="#basicInfo">什么是众筹</a></li> 
+              <li><a href="#changeMode">收费模式</a></li> 
+              <li><a href="#investCertifyProcess">投资认证流程</a></li> 
+              <li><a href="#projectCheckProcess">项目审核流程</a></li> 
+              <li><a href="#riskWarning">风险提示</a></li> 
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane active" id="basicInfo">
+                <div class="content">
+                    <div class="q">
+                        <p>什么是股权众筹？</p>
+                    </div>
+                    <div class="a">
+                        <p>
+                            股权众筹是指，公司出让一定比例的股份，面向普通投资者，投资者通过出资入股公司，获得未来收益。这种基于互联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化”
+                        </p>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="q">
+                        <p>什么是股权众筹？</p>
+                    </div>
+                    <div class="a">
+                        <p>
+                            股权众筹是指，公司出让一定比例的股份，面向普通投资者，投资者通过出资入股公司，获得未来收益。这种基于互联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化”
+                             股权众筹是指，公司出让一定比例的股份，面向普通投资者，投资者通过出资入股公司，获得未来收益。这种基于互联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化”
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="changeMode">
+                <div class="content">
+                    <div class="q">
+                        <p>股权众筹跟传统股权融资有什么区别？</p>
+                    </div>
+                    <div class="a">
+                        <p>
+                        联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权融资的模式被称作股权众筹。另一种解释就是“股权股权众筹是指，公司出让一股权众筹是指，公司出联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权融资的模式被称作股权众筹。另一种解释就是“股权股权众筹是指，公司出让一股权众筹是指，公司出让一定比例的股份，面向普通投资者，投资者通过出资入股公司，获得未来收益。这种基于互联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化”
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="investCertifyProcess">
+                <div class="content">
+                    <div class="q">
+                        <p>什么是股权众筹？</p>
+                    </div>
+                    <div class="a">
+                        <p>
+                            融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化
+                            股权众筹是指，公司出让一定比例的股份，面向普通投资者，投资者通过出资入股公司，获得未来收益。这种基于互联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募
+                            股权众筹是指，公司出让一定比例的股份，面向普通投资者，投资者通过出资入股公司，获得未来收益。这种基于互联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化”
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="projectCheckProcess">
+                <div class="content">
+                    <div class="q">
+                        <p>股权众筹跟传统股权融资有什么区别？</p>
+                    </div>
+                    <div class="a">
+                        <p>
+                            融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化
+                            股权众筹是指，公司出让一定比例的股份，面向普通投资者，投资者通过出资入股公司，获得未来收益。这种基于互联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化”
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="riskWarning">
+                <div class="content">
+                    <div class="q">
+                        <p>什么是风险提示？</p>
+                    </div>
+                    <div class="a">
+                        <p>
+                            风险提示是指，公司出让一定比例的股份，面向普通投资者，投资者通过出资入股公司，获得未来收益。这种基于互联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化”
+                            风险提示是指，公司出让一定比例的股份，面向普通投资者，投资者通过出资入股公司，获得未来收益。这种基于互联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化”
+                            风险提示是指，公司出让一定比例的股份，面向普通投资者，投资者通过出资入股公司，获得未来收益。这种基于互联网渠道而进行融资的模式被称作股权众筹。另一种解释就是“股权众筹是私募股权互联网化”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade C-register-login-modal" id="registerModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body ">
+                    <div class="register-login-box">
+                        <ul class="nav nav-tabs" id="myRegisterTab"> 
+                          <li class="active"><a href="#phone">手机注册</a></li> 
+                          <li><a href="#email">邮箱注册</a></li> 
+                        </ul> 
+                        <div class="tab-content"> 
+                          <div class="tab-pane active" id="phone">
+                              <div class="row">
+                                  <input class="form-control J-name" type="text" maxlength="16" placeholder="用户名" onchange="judgeName(this)">
+                              </div>
+                              <div class="row">
+                                  <input class="form-control J-pwd" maxlength="16" type="password" placeholder="请输入至少6位密码" onchange="judgePassword(this)">
+                              </div>
+                              <div class="row">
+                                  <input class="form-control J-pwd-confir" maxlength="16" type="password" placeholder="请确认密码" onchange="judgePasswordConfirm(this)">
+                              </div>
+                              <div class="row">
+                                  <input class="form-control J-phone" type="num" maxlength="11" placeholder="请输入手机号" onchange="judgePhoneNum(this)">
+                              </div>
+                              <div class="row">
+                                  <div class="col-xs-8 check-input">
+                                      <input class="form-control J-check-code" type="text" placeholder="输入验证码">
+                                  </div>
+                                  <div class="col-xs-4 check-btn">
+                                      <input class="btn J-phone-check" value="获取验证">
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <input type="checkbox" class="checkbox">
+                                  我已阅读并同意
+                                  <a href="services-terms.html">《服务条款》</a>
+                              </div>
+                              <div class="error-box">
+                                  请将信息填写完整
+                              </div>
+                              <div class="row">
+                                  <button onclick="post_data(this)" class="btn ">注册</button>
+                              </div>
+                              <div class="row bottom">
+                                  <p>已有账号？<a href="javascript:void;" class="J-change-to-login">直接登录</a></p>
+                              </div>
+                          </div> 
+                          <div class="tab-pane" id="email">
+                              <div class="row">
+                                  <input class="form-control J-name" type="text" maxlength="16" placeholder="用户名" onchange="judgeName(this)">
+                              </div>
+                              <div class="row">
+                                  <input class="form-control J-email" type="email" onchange="judgeEmail(this)" placeholder="邮箱地址">
+                              </div> 
+                              <div class="row">
+                                  <input class="form-control J-pwd" type="password" maxlength="16" onchange="judgePassword(this)" placeholder="请输入至少6位密码">
+                              </div>
+                              <div class="row">
+                                  <input class="form-control J-pwd-confir" type="password" maxlength="16" onchange="judgePasswordConfirm(this)"  placeholder="请确认密码">
+                              </div>
+                              <div class="row">
+                                  <div class="col-xs-8 check-input">
+                                      <input class="form-control J-check-code" type="text" placeholder="输入验证码">
+                                  </div>
+                                  <div class="col-xs-4 check-btn">
+                                      <a href="javascript:void(0)" class="btn">验证码</a>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <input type="checkbox" class="checkbox">
+                                  我已阅读并同意
+                                  <a href="services-terms.html">《服务条款》</a>
+                              </div>
+                              <div class="error-box"></div>
+                              <div class="row">
+                                  <button onclick="post_data(this)" class="btn ">注册</button>
+                              </div>
+                              <div class="row bottom">
+                                  <p>已有账号？<a href="javascript:void;" class="J-change-to-login">直接登录</a></p>
+                              </div>
+                          </div> 
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade C-register-login-modal" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Welcome</p>
+                </div>
+                <div class="modal-body ">
+                    <div class="register-login-box login" id="login">
+                        <div class="row">
+                            <input type="text" class="form-control J-account" onchange="judgeLoginName(this)" placeholder="手机号或者邮箱"> 
+                        </div>
+                        <div class="row">
+                            <input type="password" class="form-control J-pwd" onchange="judgeLoginPassword(this)" maxlength="16" placeholder="输入密码"> 
+                        </div>
+                        <div class="row">
+                            <input type="checkbox" class="checkbox">
+                              一周内自动登录
+                              <a class="f-r J-forgot-password" href="javascript:void;">忘记密码？</a>
+                        </div>
+                        <div class="error-box">
+                          </div>    
+                        <div class="row">
+                              <button onclick="post_data(this)" class="btn">登录</button>
+                          </div>
+                          <div class="row bottom">
+                              <p>没有账号？<a href="javascript:void;" class="J-change-to-register">立即注册</a></p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade C-register-login-modal" id="forgotPasswordModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body ">
+                    <div class="forgot-password-box">
+                        <ul class="nav nav-tabs" id="myForgotPwdTab"> 
+                            <li class="active"><a href="#phoneBack">通过手机号找回</a></li> 
+                            <li><a href="#emailBack">通过邮箱找回</a></li> 
+                        </ul> 
+                   
+                        <div class="tab-content"> 
+                            <div class="tab-pane active" id="phoneBack">
+                                <div class="row">
+                                    <input type="text" class="form-control J-phone-input" maxlength="11" placeholder="手机号" onchange="judgePhoneNum(this)">
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7 check-box">
+                                        <input type="text" class="form-control" placeholder="输入验证码">
+                                    </div>
+                                    <div class="col-xs-3 check-box-btn">
+                                        <input type="button" class="btn C-J-fetch-check-btn J-fetch-phone-check" value="获取验证">
+                                    </div>
+                                </div>
+                                <div class="error-box"></div>
+                                <input type="button" class="btn J-phone-reset-pwd" value="重置密码">
+                            </div>
+                            <div class="tab-pane" id="emailBack">
+                                <div class="row">
+                                    <input type="text" class="form-control J-email-input" maxlength="11" placeholder="注册邮箱" onchange="judgeEmail(this)">
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7 check-box">
+                                        <input type="text" class="form-control" placeholder="输入验证码">
+                                    </div>
+                                    <div class="col-xs-3 check-box-btn">
+                                        <input type="button" class="btn C-J-fetch-check-btn J-fetch-email-check" value="获取验证">
+                                    </div>
+                                </div>
+                                <div class="error-box"></div>
+                                <input type="button" class="btn J-email-reset-pwd" value="重置密码">
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="alertImgModel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body ">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="back2top">
+            <a href="javascript:void(0);"></a>
+        </div>
+        <div class="footer-links">
+            <p>
+                <a href="#" class="link">帮助中心</a>
+                <a href="#" class="link">商务合作</a>
+                <a href="#" class="link">免责声明</a>
+            </p>
+        </div>
+        <p class="copyright">Copyright©2012-2015北京无花果科技咨询有限公司 版权所有 京ICP备13025672号</p>
+        <p class="copyright">京ICP备12031756号·京公网安备11010802012285号·京网文2012【92850 】</p>
+
+    </footer>
+</body>
+</html>
+
+<script>
+    $('#QATab a').click(function (e) { 
+      e.preventDefault();//阻止a链接的跳转行为 
+      $(this).tab('show');//显示当前选中的链接及关联的content 
+    }) 
+
+</script>

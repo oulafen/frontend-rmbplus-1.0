@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> <!--优先使用IE最新版和chrome-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"> <!--百度禁止转码-->
+    <meta content="width=1024" name="viewport">  <!--非响应式-->
+    <title>18plus</title>
+    <link rel="icon" href="images/favicon.ico">
+    <!--[if IE]>
+        <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.imgareaselect.pack.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/address-input.js"></script>
+    <script type="text/javascript" src="js/return-confirm.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/imgareaselect-default.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar" role="navigation">
+                <div class="navbar-header">
+                    <a class="logo" href="#"><img src="images/logo.png"></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="project-release.html">项目发布</a></li>
+                    <li><a href="q-a.html">新手问答</a></li>
+                </ul>
+                <div class="navbar-right logined J-logined">
+                    <ul class="user-box">
+                        <li class="J-drop-taggle">
+                            <a href="account.html#news" class="news-taggle">
+                                <span>消息</span>
+                                <span class="news-num J-news-num">
+                                    3
+                                </span>
+                            </a>
+                            <div class="drop-menu J-drop-menu">
+                                <!-- if没有未读消息 -->
+                                <p class="no-news-tip J-no-news-tip">暂无新消息</p>
+                                <!-- endif -->
+
+                                <!-- if 有新消息 -->
+                                <div class="J-news-tip-box">
+                                    <a href="account.html#news">
+                                        <p>aaaaaaaaassssssssssssssssssssssssssssssssssssssssssaaaaaa</p>
+                                    </a>
+                                    <a href="account.html#news">
+                                        <p>bbbbbbbbbbbbbbb</p>
+                                    </a>
+                                    <a href="account.html#news">
+                                        <p>ccccccccccccccccccccccc</p>
+                                    </a>
+                                </div>  
+                                <!-- endif -->
+                                <div class="more">
+                                    <a class="C-news-more" href="account.html#news"><span>查看全部</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="J-drop-taggle">
+                            <a href="account.html">
+                                <img class="user-head" src="images/user-head-default.png" >
+                            </a>
+                            <div class="drop-menu account-drop-menu J-drop-menu">
+                                <a href="account.html#basic"><p>个人信息</p></a>
+                                <a href="account.html#investment"><p>投资的项目</p></a>
+                                <a href="account.html#financing"><p>融资的项目</p></a>
+                                <a href="account.html#news"><p>消息通知</p></a>
+                                <a href="account.html#password"><p>修改密码</p></a>
+                                <a href="index.html" class="J-logout"><p>退出</p></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="C-return-confirm-box">
+            <div class="title">
+                海尔小帅造
+            </div>
+            <div class="return-box">
+                <p class="label">
+                    您的投资金额
+                </p>
+                <div class="box money">
+                    90000元
+                </div>
+                <p class="mini-label">
+                    占本轮股份0.02%
+                </p>
+            </div>
+            <div class="return-box">
+                <p class="label">
+                    您的实物回报
+                </p>
+                <div class="box">
+                    阿里小号玩哦，您将史无前例的价格获得HiSmart只能背包一个，市场价格1499元！
+                </div>
+            </div>
+            <div class="return-box">
+                <p class="label">
+                    您的收货地址
+                </p>
+                <p class="mini-label">
+                    （如不需要实物回报请勿填写收货地址）
+                </p>
+                <div class="address-box">
+                    <a href="javascript:void;" class="btn J-new-address">新增收货地址</a>
+                    <div class="J-addr-info-input">
+                        <div class="row">
+                            <div class="col-xs-2 input-label">
+                                联系人姓名
+                            </div>
+                            <div class="col-xs-9">
+                                <input type="text" class="form-control J-name" placeholder="请输入您的姓名">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2 input-label">
+                                所在区域
+                            </div>
+                            <div class="col-xs-10 select-box">
+                                <select class="form-control" name="省" id="address1">
+                                    <option>省份</option>
+                                </select>
+                                <select class="form-control" name="市" id="address2">
+                                    <option>地级市</option>
+                                </select>
+                                <select class="form-control" name="县" id="address3">
+                                    <option>市、县级市、县</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2 input-label">
+                                详细地址
+                            </div>
+                            <div class="col-xs-9">
+                                <input type="text" class="form-control J-address-detail" placeholder="请输入您能收到货的地址">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2 input-label">
+                                电话
+                            </div>
+                            <div class="col-xs-9">
+                                <input type="text" class="form-control J-phone" placeholder="手机或固定电话">
+                            </div>
+                        </div>
+                        <div class="error-box"></div>
+                        <div class="row btn-box">
+                            <div class="col-xs-3"><a href="javascript:void;" class="btn C-J-save-btn">保存</a></div>
+                            <div class="col-xs-3"><a href="javascript:void;" class="btn C-J-cancel-btn">取消</a></div>
+                        </div>
+
+                    </div>
+                    <div class="box J-addr-info-box">
+                        <p>
+                            <span  class="name J-name">王大发</span>
+                            <span class="phone J-phone">15687654454</span>
+                        </p>
+                        <p>
+                            <span class="address J-address">
+                                北京市 海淀区 融科望京中心A座706
+                            </span>
+                        </p>
+                        <p class="fix-box">
+                            <a href="javascript:void;" class="J-fix">修改</a>
+                            <a href="javascript:void;" class="J-delete">删除</a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="return-box">
+                <p class="check-box">
+                    <input type="checkbox">
+                    我已阅读并同意
+                    <a href="#">《投资协议书》</a>
+                    <a href="#">《风险提示书》</a>
+                </p>
+                <div class="error-box"></div>
+                <a href="javascript:void;" class="btn J-confirm">确定投资</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div id="back2top">
+            <a href="javascript:void(0);"></a>
+        </div>
+        <div class="footer-links">
+            <p>
+                <a href="" class="link">帮助中心</a>
+                <a href="" class="link">商务合作</a>
+                <a href="" class="link">免责声明</a>
+            </p>
+        </div>
+        <p class="copyright">Copyright©2012-2015北京无花果科技咨询有限公司 版权所有 京ICP备13025672号</p>
+        <p class="copyright">京ICP备12031756号·京公网安备11010802012285号·京网文2012【92850 】</p>
+
+    </footer>
+</body>
+</html>
